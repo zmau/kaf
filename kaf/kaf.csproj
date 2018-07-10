@@ -32,8 +32,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,14 +55,308 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="dal\PubContext.cs" />
+    <Compile Include="dal\Normativ.cs" />
+    <Compile Include="dal\User.cs" />
+    <Compile Include="dbFirst\Artikli.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Dokumenta.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\DokumentStavke.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\DPU.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\DPUDetalji.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\DpuTemp.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Gradovi.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\GranicniPrelazi.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\GrupaArtikala.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\GrupaSastojaka.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\GrupeModifiers.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\GrupeTroskova.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Izvodi.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\IzvodiDetalji.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\JedinicaMere.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\KategorijaSoba.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Klijenti.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Log.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Lokacije.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Menu.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\MenuDetalji.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Nabavke.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\NabavkeStavke.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Najam.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\NajamArtikli.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\NajamOsobe.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Nalozi.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Nivelacija.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\NivelacijaStavkle.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\NormativGlavni.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Normativi.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Osoba.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\PDVPredRacun.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\PDVPredRacuniDetalji.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\PDVRacun.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\PDVRacuniDetalji.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Podesavanja.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Podsetnik.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Popusti.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\PoreskeGrupe.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\pubModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pubModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\pubModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\pubModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pubModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\RacunDetalji.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Racuni.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\RadniDani.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Rashod.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\RashodDetalji.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Sastojci.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Sobe.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Sto.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Strukture.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\TempBoravak.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\TempPorudzbina.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\TipSastojka.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Trosak.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Troskovi.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\TroskoviDetalji.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Users.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbFirst\Vip.cs">
+      <DependentUpon>pubModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="gui\BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="gui\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="gui\FItemEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\FItemEditor.Designer.cs">
+      <DependentUpon>FItemEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\FItemGroupEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\FItemGroupEditor.Designer.cs">
+      <DependentUpon>FItemGroupEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\FUsersEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\FUsersEditor.Designer.cs">
+      <DependentUpon>FUsersEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\FUserEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\FUserEditor.Designer.cs">
+      <DependentUpon>FUserEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dal\Item.cs" />
+    <Compile Include="gui\FItemsEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\FItemsEditor.Designer.cs">
+      <DependentUpon>FItemsEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806041330245_InitialCreate.cs" />
+    <Compile Include="Migrations\201806041330245_InitialCreate.Designer.cs">
+      <DependentUpon>201806041330245_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806041431482_users.cs" />
+    <Compile Include="Migrations\201806041431482_users.Designer.cs">
+      <DependentUpon>201806041431482_users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806041531005_user.password.cs" />
+    <Compile Include="Migrations\201806041531005_user.password.Designer.cs">
+      <DependentUpon>201806041531005_user.password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806051437000_user-role_attribute.cs" />
+    <Compile Include="Migrations\201806051437000_user-role_attribute.Designer.cs">
+      <DependentUpon>201806051437000_user-role_attribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806182111151_items.cs" />
+    <Compile Include="Migrations\201806182111151_items.Designer.cs">
+      <DependentUpon>201806182111151_items.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806241713139_6.cs" />
+    <Compile Include="Migrations\201806241713139_6.Designer.cs">
+      <DependentUpon>201806241713139_6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Srpski.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Srpski.resx</DependentUpon>
+    </Compile>
+    <Compile Include="_kaf_dal_PubContextDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_kaf_dal_PubContextDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="gui\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\FItemEditor.resx">
+      <DependentUpon>FItemEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\FItemGroupEditor.resx">
+      <DependentUpon>FItemGroupEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\FUserEditor.sr-Latn.resx">
+      <DependentUpon>FUserEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\FUsersEditor.resx">
+      <DependentUpon>FUsersEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\FUserEditor.resx">
+      <DependentUpon>FUserEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\FItemsEditor.resx">
+      <DependentUpon>FItemsEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806041330245_InitialCreate.resx">
+      <DependentUpon>201806041330245_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806041431482_users.resx">
+      <DependentUpon>201806041431482_users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806041531005_user.password.resx">
+      <DependentUpon>201806041531005_user.password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806051437000_user-role_attribute.resx">
+      <DependentUpon>201806051437000_user-role_attribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806182111151_items.resx">
+      <DependentUpon>201806182111151_items.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806241713139_6.resx">
+      <DependentUpon>201806241713139_6.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -61,7 +365,22 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Srpski.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Srpski.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="dbFirst\pubModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>pubModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="dbFirst\pubModel.edmx.diagram">
+      <DependentUpon>pubModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\ItemGroup.datasource" />
+    <None Include="Properties\DataSources\System.Data.Entity.Migrations.Utilities.IndentedTextWriter.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -71,9 +390,43 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="_kaf_dal_PubContextDataSet.xsc">
+      <DependentUpon>_kaf_dal_PubContextDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_kaf_dal_PubContextDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_kaf_dal_PubContextDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_kaf_dal_PubContextDataSet.xss">
+      <DependentUpon>_kaf_dal_PubContextDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dbFirst\pubModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>pubModel.edmx</DependentUpon>
+      <LastGenOutput>pubModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="dbFirst\pubModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>pubModel.edmx</DependentUpon>
+      <LastGenOutput>pubModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="images\delete-icon.png" />
+    <Content Include="images\save-icon.png" />
+    <None Include="Resources\delIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

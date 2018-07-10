@@ -117,11 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="delete_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\delete-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Target" xml:space="preserve">
+    <value>H4sIAAAAAAAEAO1Zy27jNhTdF+g/CFq1Rcayk01r2DNInaQwOnkgSgbdBbR07RBDUSpJpTaKflkX/aT+Qi/1FinHstOkBVoECCKS98lzX8yfv/8x+bCOmPMEQtKYT93RYOg6wIM4pHw1dVO1fPet++H9l19MzsNo7Xwqz53oc0jJ5dR9VCoZe54MHiEichDRQMQyXqpBEEceCWPveDj8zhuNPEAWLvJynMltyhWNIPvAz1nMA0hUSthlHAKTxTru+BlX54pEIBMSwNT9TJaDkDDXOWWUoHgf2NJ1COexIgqVG99L8JWI+cpPcIGwu00CeG5JmIRC6XF9vK/+w2Otv1cTlqyCVKo42pPh6KRwiGeSH+RWt3IYuuwcXas22urMbVP3NmZouCloPGNCH6o8OtDnjhz8OqouGvGgf46cWcpUKmDKIVWCsCPnJl0wGvwIm7v4M/ApTxlraoF64F5rAZduRJyAUJtbWBa60dB1vDadZxJWZA2aXPM5VyfHrnOFwsmCQXXJDSt9FQv4ATgIoiC8IUqBwDuah5C5yZJuyOL4u5SGqMKocJ1Lsv4IfKUepy7+6ToXdA1huVJocM8pBhESKZGCJeSKPNFVpp8hLpXoeNe5BZbtykea5AgfIKrFg8hu8kLEkb6rqVstPtwRsQKFmsbmjh+nIjBUmHg1SJ6FjmbTBzr63P/QeQvodADm6i0EJUTKX2IRvrqggIhwhqffMOrysNo/6MrQsoOuDMc+QXcqZRzQTHQj6nKxbQPOeehs1SF3Vqk1+gvDjiYYaChy6n5jeaOLWZVFamZ58WgzGw4GI9O2hhV2RsH6rgjFQCoMxAygl2CtOpILqlPkF1lcpKm4ZumDapQ3zJm1c1uaW1a3ie/zhGsR5z40iBs2tjkUGGnsWwAy89lzd1kpWenn9SEvb69BXvjGTJNtQzowWl1Y3Yl5eStWtmzelp5tckmSBAO20cMVK46fN3Czd/7+TU6U8/AC2dHrVNpWkjBzkxUYuygaNb2gQqozosiC6JQxCyPrWAOeW9BTCmoi0L6iElPlaf13TtFsuUzC2mMXaESExSazB4xrtcmydpkwIjqK3ixmacS3Fc7nqPMy1qTPV2wOE8/Q2/SIZ7nEwKXp317ez0PkEO9nQb6/97vJ/mnvb+NQdwhNLvVqf051C9DkVK/251TX+CanevXtsdXOiDbAigzfjaFisw9OdOI2nGElcNv4XsDKWHShS9teCd1Hn6IeHajP3qpgzg1p1gbNpe7Lq7auh5VmTbMv2Spt5pEKYlWJM0rZpCgru98orDqTH3EdNP2JhrrG+BupIBroAwP/ZzZjFEFdH7gknC5BqnxEco+Ho2PjxePf8/rgSRmyHk8Qbz7jUe3RnVOcNQL2H+v4ExHBIxFfRWT9dZOTPX/sN3L/p121e8p9ETNzkn0RM3NafRGzKrc17sQaj+Y8hPXU/TWjGTvznx4KsiPnWmDmGDtD57fDsHjIJHpb1cW9BkZrhDlggkXsg9DQJAyTulQC07rVF9wIygOaENbU165ofeJJO65iZ+6cQQJcB0rTpj5yninbFU8jrHcZvuc0bk9FuwfurfN2XummbriI8UpzBHZPoV2j+NZJvItt52z8SkN60+Z6BNs1l1uj/OuM4nZfghhp/IcFwSnpqmahOy0OQQsd1Zk5X8YlSg2NyiNG2roERUKEzqlQdEkChdsBSJm92n0iLMUj59ECwjm/TlWSKjQZogVrPaBqsD8nP3tvaOs8uU6y57q/wwRUk6IJcM2/TykLK70v7DK3jYWOoqJ26rtUuoauNhWnq5j3ZFS4rwr+O4gShszkNffJExyiG0LvI6xIsCnby+1Mdl9E2+2TM0pWgkSy4FHT4ydiOIzW7/8C4FhV/2gcAAA=</value>
   </data>
-  <data name="save_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\save-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DefaultSchema" xml:space="preserve">
+    <value>dbo</value>
   </data>
 </root>
